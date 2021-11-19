@@ -6,6 +6,10 @@
 
 import UIKit
 
+class calculator {
+    
+}
+
 class CalculatorViewController: UIViewController {
     var calculator = Formula()
     
