@@ -7,7 +7,10 @@
 import UIKit
 
 class CalculatorViewController: UIViewController {
-    @IBAction func touchUpAllClearButton(_ sender: Any) {
+    var calculator = Formula()
+    
+    @IBAction func touchUpAllClearButton(_ sender: UIButton) {
+        clearAllElement()
     }
     
     @IBAction func touchUpClearEntryButton(_ sender: UIButton) {
@@ -28,6 +31,11 @@ class CalculatorViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    private func clearAllElement() {
+        calculator.operands.removeAllItem()
+        calculator.operators.removeAllItem()
+    }
+    
 
 }
 
